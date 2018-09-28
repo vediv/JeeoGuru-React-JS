@@ -1,0 +1,16 @@
+.caro img {
+  height: 536px;
+}
+.play {
+  width: 200px !important;
+  height: 100px !important;
+  margin-left: -26px;
+  margin-top: -125px;
+  position: absolute;
+  z-index: 1;
+}
+.playimage {
+  width: 80px !important;
+  height: 80px !important;
+
+}

@@ -1,0 +1,36 @@
+span{
+  border-bottom: 0px solid #fff;
+  color: red;
+}
+p{
+  margin-left: 15px;
+  color: white;
+}
+.lastleft:hover{
+  color: red;
+}
+.lastleft{
+  float: left;
+  color: white;
+  font-size: 12px;
+}
+.last {
+  height: 55px;
+  width: 100%;
+  margin-left: 20px;
+  background-color: #1D2529;
+  margin-left: 0px;
+
+
+}
+.line1 {
+  position: absolute;
+  margin-top: -1px;
+  width: 100%;
+  background-color: white;
+}
+.all {
+  float: right;
+  color: white;
+  font-size: 12px;
+}
