@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import stringSimilarity from 'string-similarity';
+import originals from './original';
+import Carousel from "./Carousel";
+import Slider from "./Slider";
+import Footer from "./Footer";
+import LastOne from "./last";
 import './css/Header.css';
 import logo from '../img/logo.png';
 
@@ -8,7 +15,9 @@ class App extends Component {
     super(props);
     this.state = {
       error: null,
-      isLoaded: false
+      isLoaded: false,
+      slick_carousel_active: true,
+      carousel_active: true
     };
   }
 
@@ -19,6 +28,21 @@ class App extends Component {
       this.setState({isLoaded: true, error});
     })
   }
+  func(event) {
+    var k = document.getElementsByClassName('menu')[event].textContent;
+  var Movie_similarity = stringSimilarity.compareTwoStrings('MOVIES', k);
+    var Home_similarity1 = stringSimilarity.compareTwoStrings('HOME', k);
+  if(Movie_similarity)
+    {
+    this.setState({slick_carousel_active:false , carousel_active:false});
+    }
+    else if(Home_similarity1)
+    {
+        this.setState({slick_carousel_active:true , carousel_active:true});
+    }
+    else{
+        this.setState({slick_carousel_active:false , carousel_active:true});}
+  }
 
   render() {
     const {error, isLoaded, menus} = this.state;
@@ -27,7 +51,9 @@ class App extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      return (<div className="container1">
+      return (<Router>
+        <div>
+        <div className="container1">
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
@@ -36,8 +62,8 @@ class App extends Component {
                 <Nav>
                   <ul className="demo">
                     {
-                      menus.map(menu => (<NavItem className="option" key>
-                        <li><img alt="img" src={menu.menu_icon}/>{menu.catName}</li>
+                      menus.map((menu , index) => (<NavItem className="option" key={index}>
+                        <li className = "menu" onClick = { () => this.func(index)}><Link to={menu.catName}><img alt="img" src={menu.menu_icon}/>{menu.catName}</Link></li>
                       </NavItem>))
                     }
                     <div className="container-right ">
@@ -47,7 +73,17 @@ class App extends Component {
                 </Nav>
                 </Navbar.Header>
               </Navbar>
-              </div>
+            </div>{this.state.carousel_active && <Carousel />}
+            {this.state.slick_carousel_active && <Slider />}
+
+              <Switch>
+              <Route exact path = '/ORIGINALS'
+              component = {
+                originals
+              }/></Switch>
+              <Footer />
+              <LastOne /></div>
+                </Router>
               );
     }
   }

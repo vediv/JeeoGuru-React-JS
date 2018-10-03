@@ -14,3 +14,35 @@
   height: 80px !important;
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 837px){
+  .caro img {
+    height: 320px;
+  }
+  .play {
+    width: 200px !important;
+    height: 100px !important;
+    margin-left: -26px;
+    margin-top: -102px;
+    position: absolute;
+    z-index: 1;
+  }
+
+}
+
+@media screen and (min-width: 305px) and (max-width: 400px){
+  .caro img {
+    height: 220px;
+  }
+  .play {
+    margin-left: -46px;
+    margin-top: -72px;
+    position: absolute;
+    z-index: 1;
+  }
+  .playimage {
+    width: 40px !important;
+    height: 40px !important;
+
+  }
+}

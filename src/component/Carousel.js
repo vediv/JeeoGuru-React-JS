@@ -24,10 +24,9 @@ export default class Apps extends Component {
       })
   }
     render() {
-      console.log(this.state.Carousels);
         return (
             <Carousel className="caro"
-              autoplay
+              autoplay={true}
               infiniteLoop={true}
               showThumbs={false}
               showStatus={false}

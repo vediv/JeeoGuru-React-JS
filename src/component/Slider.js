@@ -24,7 +24,7 @@ export default class SimpleSlider extends Component {
   }
   handleEvents1(item){
           return item.map((event, idx) => {
-   return<li><img src={`${event.thumburl}/width/500/height/300/quality/75`} alt=""/></li>
+   return<li className="sliderimg"><img src={`${event.thumburl}/width/500/height/300/quality/75`} alt=""/></li>
           })
       }
   render() {

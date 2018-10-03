@@ -29,16 +29,86 @@
 #left p {
   margin-left: 0px;
 }
-#right b{
+#mid b{
   float: left;
   font-size: 15px;
 }
- #right {
+ #mid {
   float: right;
   margin-top: 20px;
   text-align: right;
-  margin-right: 350px;
+  margin-right: 370px;
 }
- #right h5, p {
+ #mid h5, p {
    float: left;
  }
+#right {
+  float: right;
+  color: white;
+  display: inline-block;
+  margin-top: -100px;
+  margin-right: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 837px) {
+  .section p{
+    font-size: 12px;
+  }
+  #left {
+   width: 350px;
+   margin-left: 15px;
+   margin-top: 14px;
+ }
+ #mid {
+   position: relative;
+  margin-top: 11px;
+  margin-right: 150px;
+}
+ #mid p{
+   margin-top: -5px;
+   font-size: 12px;
+ }
+ #mid b {
+   margin-left: -85px;
+   margin-top: 0px;
+   font-size: 13px;
+ }
+ #right {
+   height: 20px !important;
+   width: 20px !important;
+   display: inline;
+   margin-top: -100px;
+   margin-right: 40px;
+ }
+}
+
+@media screen and (min-width: 305px) and (max-width: 400px) {
+  .section p{
+    font-size: 10px;
+  }
+  #left {
+   width: 170px;
+   margin-left: 10px;
+   margin-top: 11px;
+ }
+ #mid {
+   position: relative;
+  margin-top: 11px;
+  margin-right: 110px;
+}
+ #mid p{
+   margin-top: -5px;
+   font-size: 10px;
+ }
+ #mid b {
+   margin-left: -85px;
+   margin-top: 0px;
+   font-size: 13px;
+ }
+ #right {
+   height: 20px !important;
+   width: 20px !important;
+   display: inline;
+   margin-top: -100px;
+   margin-right: 40px;
+ }
+}

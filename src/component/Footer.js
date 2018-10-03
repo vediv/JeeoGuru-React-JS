@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { SocialIcon } from 'react-social-icons';
 import './css/footer.css';
 import foot from '../img/foot.jpg';
 
@@ -17,7 +18,7 @@ export default class FooterSide extends Component {
             <p >Biocine Entertainment was established as a partnership firm in 2017. The company is engaged in providing entertainment based mobile application services. The company will commence commercial operations from August 2018
           </p>
         </div>
-        <div id="right">
+        <div id="mid">
           <h5>CONTACT<span>
               US</span>
           </h5><br/>
@@ -26,6 +27,11 @@ export default class FooterSide extends Component {
             60/141 Haripada Dutta Lane Kolkatta-700033<br/>
             +09874558108
           </p>
+        </div>
+        <div id="right">
+          <SocialIcon url="http://facebook.com" network="facebook" style={{ height: 40, width: 40 }}/>&nbsp;&nbsp;&nbsp;&nbsp;
+          <SocialIcon url="http://google.com" network="google" style={{ height: 40, width: 40 }}/>&nbsp;&nbsp;&nbsp;&nbsp;
+          <SocialIcon url="http://twitter.com" network="twitter" style={{ height: 40, width: 40 }}/>
         </div>
       </div>
     </section>);

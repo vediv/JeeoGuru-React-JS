@@ -17,11 +17,8 @@ p{
 .last {
   height: 55px;
   width: 100%;
-  margin-left: 20px;
   background-color: #1D2529;
   margin-left: 0px;
-
-
 }
 .line1 {
   position: absolute;
@@ -33,4 +30,25 @@ p{
   float: right;
   color: white;
   font-size: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 837px)  {
+  p{
+    margin-top: -10px;
+    margin-left: 15px;
+    color: white;
+  }
+  .last {
+    height: 35px;
+    margin-left: 0px;
+    margin-bottom: -1000px;
+  }
+  .lastleft{
+    margin-top: -12px;
+    font-size: 10px;
+  }
+  .all {
+    margin-top: -12px;
+    font-size: 10px;
+  }
 }
